@@ -1134,3 +1134,81 @@ CREATE TABLE chat_sessions (
 ---
 
 *이 문서는 Phonssa AI 제품 추천 시스템의 전체적인 설계와 개발 계획을 담고 있습니다. 프로젝트 진행에 따라 지속적으로 업데이트될 예정입니다.*
+
+## 📋 문서 관리 및 개발 진행 전략
+
+### 🗂️ 프로젝트 문서화 체계
+
+본 프로젝트는 서버별/영역별로 세분화된 문서 관리 전략을 사용합니다:
+
+```
+md-files/
+├── PROJECT.md              # 📖 프로젝트 전체 개요 및 설계 (현재 파일)
+├── CLAUDE.md               # 🤖 Claude AI 작업 내역 총괄 관리
+├── CLAUDE.FRONTEND.md      # 🖥️ Frontend 개발 작업 내역
+├── CLAUDE.BACKEND.md       # 🛠️ Backend 개발 작업 내역 (예정)
+├── CLAUDE.AI-SERVICE.md    # 🧠 AI Service 개발 작업 내역 (예정)
+├── CLAUDE.DATABASE.md      # 🗄️ Database 설정 및 관리 작업 내역 (예정)
+├── CLAUDE.INFRA.md         # 🚀 Infrastructure 및 DevOps 작업 내역 (예정)
+└── [기타 시나리오 및 기술 문서들]
+```
+
+### 📝 문서별 관리 원칙
+
+#### PROJECT.md (현재 파일)
+- **목적**: 프로젝트 전체 아키텍처와 설계 원칙 정의
+- **내용**: 시스템 개요, 기술 스택, 아키텍처, 개발 계획
+- **업데이트**: 주요 아키텍처 변경이나 기술 스택 변경 시
+- **관리**: 프로젝트 매니저/아키텍트 레벨
+
+#### CLAUDE.*.md 시리즈
+- **목적**: 실제 개발 작업 내역과 문제 해결 과정 기록
+- **내용**: 구현 세부사항, 발생한 문제와 해결책, 테스트 결과
+- **업데이트**: 해당 영역 작업 수행 시 실시간 업데이트
+- **관리**: Claude AI + 개발자 협업
+
+### 🔄 개발 진행 방식
+
+#### Phase-based 개발
+1. **Phase 1**: Frontend 구현 및 안정화 ✅
+2. **Phase 2**: Backend API 서버 구현 🚧
+3. **Phase 3**: AI Service 구현 🚧
+4. **Phase 4**: Database 설계 및 구축 🚧
+5. **Phase 5**: Infrastructure 및 배포 🚧
+
+#### 문서 연동 원칙
+- 각 Phase 시작 시 해당 CLAUDE.*.md 파일 생성
+- 작업 진행 중 실시간 문제 해결 과정 기록
+- Phase 완료 시 PROJECT.md에 결과 반영
+- 서버 간 연동 작업 시 관련 문서들에 상호 참조
+
+### 📈 프로젝트 현재 상태
+
+#### ✅ 완료된 영역
+- **Frontend (React)**: 초기 구현 완료, 정상 작동 확인
+  - 상세 내역: [CLAUDE.FRONTEND.md](./CLAUDE.FRONTEND.md)
+
+#### 🚧 진행 예정 영역
+- **Backend (NestJS)**: API 서버 구현 예정
+- **AI Service (FastAPI)**: 추천 엔진 구현 예정  
+- **Database**: MySQL, Qdrant, Redis 구성 예정
+- **Infrastructure**: Docker, CI/CD 구성 예정
+
+### 🎯 다음 단계 계획
+
+1. **Backend 개발 시작**
+   - NestJS 프로젝트 초기 설정
+   - 기본 API 엔드포인트 구현
+   - CLAUDE.BACKEND.md 문서 생성
+
+2. **Database 설계**
+   - MySQL 스키마 설계
+   - Qdrant 벡터 DB 설정
+   - CLAUDE.DATABASE.md 문서 생성
+
+3. **AI Service 구현**
+   - FastAPI 기반 추천 엔진
+   - OpenAI API 연동
+   - CLAUDE.AI-SERVICE.md 문서 생성
+
+*최종 업데이트: 2025-07-31 - 문서 관리 전략 수립*
